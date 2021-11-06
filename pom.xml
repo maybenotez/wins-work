@@ -13,6 +13,7 @@
     <module>wins-spring</module>
     <module>wins-rpc-server</module>
     <module>wins-rpc-client</module>
+    <module>wins-practice</module>
   </modules>
 
   <name>wins-work</name>

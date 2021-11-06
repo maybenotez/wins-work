@@ -6,7 +6,7 @@ public class SingleCount implements Count {
 
     @Override
     public void addOne() {
-        synchronized (SingleCount.class) {
+        synchronized (this){
             size++;
         }
     }

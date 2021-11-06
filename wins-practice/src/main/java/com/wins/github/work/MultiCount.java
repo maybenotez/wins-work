@@ -1,6 +1,8 @@
 package com.wins.github.work;
 
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.LongAdder;
 
 /**
  * 一种 高效并发计数器 并且线程安全
@@ -17,8 +19,9 @@ public class MultiCount implements Count{
     }
     @Override
     public void addOne() {
-        long id = Thread.currentThread().getId();
-        int index = (int) (id % counts.length);
+
+        int hashCode = Thread.currentThread().hashCode();
+        int index = hashCode % counts.length;
         counts[index].incrementAndGet();
     }
 
