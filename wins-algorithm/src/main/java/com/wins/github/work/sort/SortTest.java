@@ -7,7 +7,7 @@ public class SortTest {
     public static void main(String[] args) {
         int[] array = {1,1,1,4,2,3,6,7,1};
 
-        Sort sort = new MergeSort();
+        Sort sort = new HeapSort();
     
         sort.sort(array);
     
